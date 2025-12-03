@@ -1,4 +1,4 @@
-""" 
+"""
 Defino una función que reciba una cadena de texto
 y vaya sumando +1 a cada key del diccionario cuando se encuentre cada letra"""
 def counter(text) -> dict:
