@@ -1,0 +1,74 @@
+// 1.1 Crea una lista ul > li dinámicamente con los paises
+const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
+const ulCountries = document.createElement('ul');
+
+for (const country of countries) {
+    const li = document.createElement('li');
+    li.textContent = country;
+    ulCountries.appendChild(li);
+}
+document.body.appendChild(ulCountries);
+
+// 1.2 Elimina el elemento que tenga la clase .fn-remove-me.
+const removeMe = document.querySelector('.fn-remove-me');
+if (removeMe) removeMe.remove();
+
+// 1.3 Utiliza el array para crear dinamicamente una lista ul > li en el div data-function="printHere".
+const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
+const printHereDiv = document.querySelector('[data-function="printHere"]');
+const ulCars = document.createElement('ul');
+
+for (const car of cars) {
+    const li = document.createElement('li');
+    li.textContent = car;
+    ulCars.appendChild(li);
+}
+printHereDiv.appendChild(ulCars);
+
+// 1.4 Crea dinamicamente divs con h4 e img (y 1.6 Botón para eliminar ese elemento)
+const countries2 = [
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
+];
+
+for (const country of countries2) {
+    const div = document.createElement('div');
+    const h4 = document.createElement('h4');
+    const img = document.createElement('img');
+    // Para el 1.6 creamos el botón aquí
+    const btnDelete = document.createElement('button');
+
+    h4.textContent = country.title;
+    img.src = country.imgUrl;
+    btnDelete.textContent = 'Eliminar este elemento';
+
+    // 1.6 Funcionalidad del botón individual
+    btnDelete.addEventListener('click', () => {
+        div.remove();
+    });
+
+    div.appendChild(h4);
+    div.appendChild(img);
+    div.appendChild(btnDelete); // Añadimos el botón al div
+    document.body.appendChild(div);
+}
+
+// 1.5 Crea un botón que elimine el último elemento de la serie de divs.
+const btnRemoveLast = document.createElement('button');
+btnRemoveLast.textContent = 'Eliminar el último';
+btnRemoveLast.style.marginTop = '20px'; // Un poco de estilo para verlo bien
+document.body.appendChild(btnRemoveLast);
+
+btnRemoveLast.addEventListener('click', () => {
+    // Seleccionamos todos los divs que hemos creado (suponiendo que son los últimos divs del body)
+    // Una estrategia más segura sería haberle puesto una clase a los divs del punto 1.4.
+    // Vamos a buscar todos los divs que tengan una imagen dentro, por ejemplo.
+    const allDivs = document.querySelectorAll('div');
+    // Eliminamos el último div de la lista
+    if (allDivs.length > 0) {
+        allDivs[allDivs.length - 1].remove();
+    }
+});
