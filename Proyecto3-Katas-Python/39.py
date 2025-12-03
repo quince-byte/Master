@@ -1,20 +1,15 @@
 import math
-
-# --- EJERCICIO 39: ÁREA DE FIGURAS ---
-print("\n--- Ejercicio 39: Área de figuras ---")
+# Función para calcular el área de figuras
 def calcular_area(figura, datos):
     figura = figura.lower()
     
     if figura == "rectangulo":
-        # datos = (base, altura)
         return datos[0] * datos[1]
     
     elif figura == "circulo":
-        # datos = (radio, )
         return math.pi * (datos[0] ** 2)
     
     elif figura == "triangulo":
-        # datos = (base, altura)
         return (datos[0] * datos[1]) / 2
     
     else:

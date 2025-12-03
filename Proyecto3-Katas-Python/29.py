@@ -1,5 +1,4 @@
-# --- EJERCICIO 29: Enmascarar texto (#####1234) ---
-# print("\n--- Ejercicio 29: Enmascarar variable ---")
+# Enmascara un texto
 def enmascarar(texto):
     cadena = str(texto)
     longitud = len(cadena)
@@ -8,4 +7,4 @@ def enmascarar(texto):
     # Multiplica '#' por la longitud menos 4 y concatena los últimos 4
     return '#' * (longitud - 4) + cadena[-4:]
 
-# print(f"Tarjeta: {enmascarar('123456781234')}")
+print(f"Tarjeta: {enmascarar('123456781234')}")

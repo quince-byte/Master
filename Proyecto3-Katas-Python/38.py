@@ -1,5 +1,4 @@
-# --- EJERCICIO 38: CALIFICACIÓN ALUMNO ---
-print("\n--- Ejercicio 38: Calificación Texto ---")
+# Función para obtener calificación por texto
 def obtener_calificacion_texto(nota):
     if 0 <= nota <= 69: return "Insuficiente"
     elif 70 <= nota <= 79: return "Bien"

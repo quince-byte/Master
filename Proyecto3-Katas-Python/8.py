@@ -1,5 +1,4 @@
-# --- EJERCICIO 8 ---
-# Programa que pide dos números y maneja excepciones (no numérico y división por cero).
+# Programa que pide dos números y maneja excepciones
 def dividir_numeros():
     try:
         num1 = float(input("Ingresa el primer número: "))
@@ -11,4 +10,4 @@ def dividir_numeros():
     except ZeroDivisionError:
         print("Error: No se puede dividir por cero.")
         
-# dividir_numeros() (Descomentar para probar interactividad)
+dividir_numeros()

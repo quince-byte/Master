@@ -1,7 +1,4 @@
-# --- EJERCICIO 36: PROCESAR TEXTO ---
-print("\n--- Ejercicio 36: Procesar Texto ---")
-
-# a. Función contar palabras
+# Función contar palabras
 def contar_palabras(texto):
     palabras = texto.split()
     frecuencia = {}
@@ -10,18 +7,18 @@ def contar_palabras(texto):
         frecuencia[p_limpia] = frecuencia.get(p_limpia, 0) + 1
     return frecuencia
 
-# b. Función reemplazar palabras
+# Función reemplazar palabras
 def reemplazar_palabras(texto, original, nueva):
     return texto.replace(original, nueva)
 
-# c. Función eliminar palabra
+# Función eliminar palabra
 def eliminar_palabra(texto, palabra_a_eliminar):
     palabras = texto.split()
-    # Filtramos las palabras que no sean la que queremos eliminar
+    # Filtro las palabras que no sean la que se quiere eliminar
     filtradas = [p for p in palabras if p != palabra_a_eliminar]
     return " ".join(filtradas)
 
-# d. Función principal procesar_texto con *args
+# Función para procesar_texto con *args
 def procesar_texto(texto, opcion, *args):
     if opcion == "contar":
         return contar_palabras(texto)
@@ -40,7 +37,7 @@ def procesar_texto(texto, opcion, *args):
         return "Opción no válida."
 
 # CASO DE USO:
-texto_prueba = "Python es genial y Python es facil"
+texto_prueba = "Hola Antonio, está genial Python, es facil"
 print(f"Texto original: '{texto_prueba}'")
 print(f"1. Contar: {procesar_texto(texto_prueba, 'contar')}")
 print(f"2. Reemplazar 'Python' por 'Java': {procesar_texto(texto_prueba, 'reemplazar', 'Python', 'Java')}")

@@ -1,6 +1,4 @@
-# --- EJERCICIO 5 ---
-# Función que recibe una lista de notas y una nota de corte (opcional).
-# Devuelve una tupla (media, estado).
+# Función que recibe una lista de notas y una nota de corte
 def evaluar_clase(notas, nota_aprobado=5):
     if not notas:
         return (0, "suspenso")
@@ -8,5 +6,5 @@ def evaluar_clase(notas, nota_aprobado=5):
     estado = "aprobado" if media >= nota_aprobado else "suspenso"
     return (media, estado)
 
-# Ejemplo de uso:
-# print(evaluar_clase([6, 7, 4, 8]))
+
+print(evaluar_clase([6, 7, 4, 8]))
