@@ -59,15 +59,11 @@ for (const country of countries2) {
 // 1.5 Crea un botón que elimine el último elemento de la serie de divs.
 const btnRemoveLast = document.createElement('button');
 btnRemoveLast.textContent = 'Eliminar el último';
-btnRemoveLast.style.marginTop = '20px'; // Un poco de estilo para verlo bien
+btnRemoveLast.style.marginTop = '20px';
 document.body.appendChild(btnRemoveLast);
 
 btnRemoveLast.addEventListener('click', () => {
-    // Seleccionamos todos los divs que hemos creado (suponiendo que son los últimos divs del body)
-    // Una estrategia más segura sería haberle puesto una clase a los divs del punto 1.4.
-    // Vamos a buscar todos los divs que tengan una imagen dentro, por ejemplo.
     const allDivs = document.querySelectorAll('div');
-    // Eliminamos el último div de la lista
     if (allDivs.length > 0) {
         allDivs[allDivs.length - 1].remove();
     }

@@ -45,14 +45,11 @@ for (const element of elementsToRemove) {
 }
 
 // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
-// Seleccionamos todos los divs. Según el HTML, los dos divs vacíos están juntos antes de los divs con clase.
 const allDivs = document.querySelectorAll('div');
 const pMiddle = document.createElement('p');
 pMiddle.textContent = 'Voy en medio!';
-// Insertamos antes del segundo div encontrado (índice 1)
 document.body.insertBefore(pMiddle, allDivs[1]);
 
-// 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
 const insertDivs = document.querySelectorAll('.fn-insert-here');
 for (const div of insertDivs) {
     const pInside = document.createElement('p');

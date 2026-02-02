@@ -11,16 +11,11 @@ async function getPokemon() {
     try {
         const response = await fetch(baseUrl + id);
         const data = await response.json();
-        
-        // La API de pokeapi tiene muchas imágenes. 
-        // 'sprites.front_default' es la estándar pequeña.
-        // 'sprites.other.dream_world.front_default' es un SVG de mayor calidad.
         const imageUrl = data.sprites.other.dream_world.front_default || data.sprites.front_default;
         
         imgContainer.src = imageUrl;
         imgContainer.alt = data.name;
-        
-        // Opcional: ponerle el nombre en un título
+
         console.log(`Pokemon cargado: ${data.name}`);
         
     } catch (error) {
@@ -28,5 +23,4 @@ async function getPokemon() {
     }
 }
 
-// Ejecutar la función al cargar
 getPokemon();

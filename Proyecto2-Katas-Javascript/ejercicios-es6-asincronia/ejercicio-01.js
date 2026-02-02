@@ -13,11 +13,9 @@ const animalFunction = () => {
     return {name: 'Bengal Tiger', race: 'Tiger'} 
 };
 const { name: animalName, race } = animalFunction(); 
-// Nota: he renombrado 'name' a 'animalName' para evitar conflictos si ya existiera, 
-// pero { name, race } también es válido.
 console.log(animalName, race);
 
-// 1.4 Destructuring anidado o secuencial
+// 1.4 Destructuring anidado
 const car = {name: 'Mazda 6', itv: [2015, 2011, 2020] };
 const { name: carName, itv } = car;
 const [year1, year2, year3] = itv;

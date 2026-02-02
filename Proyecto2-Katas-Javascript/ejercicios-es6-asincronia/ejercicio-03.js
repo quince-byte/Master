@@ -1,4 +1,4 @@
-// 3.1 Lista de nombres
+
 const users = [
 	{id: 1, name: 'Abel'},
 	{id:2, name: 'Julia'},
@@ -8,19 +8,15 @@ const users = [
 const names = users.map(user => user.name);
 console.log(names);
 
-// 3.2 Cambiar nombre si empieza por 'A'
+// 3.2 Cambio el nombre si empieza por 'A'
 const anacletoNames = users.map(user => {
     if (user.name.startsWith('A')) {
-        // Opción 1: Devolver solo el string cambiado
         return 'Anacleto'; 
-        // Opción 2: Si quisieras devolver el objeto entero modificado (depende de interpretación):
-        // return {...user, name: 'Anacleto'};
     }
     return user.name;
 });
 console.log(anacletoNames);
 
-// 3.3 Añadir (Visitado)
 const cities = [
 	{isVisited:true, name: 'Tokyo'},
 	{isVisited:false, name: 'Madagascar'},

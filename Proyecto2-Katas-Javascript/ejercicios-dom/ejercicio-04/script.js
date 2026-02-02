@@ -1,5 +1,4 @@
 // 1.1 Añade un botón con el id btnToClick y evento click
-// Primero creamos el botón (o lo seleccionas si lo añadiste al HTML a mano)
 const btnClick = document.createElement('button');
 btnClick.id = 'btnToClick';
 btnClick.textContent = 'Hame click y mira la consola';
@@ -13,7 +12,6 @@ btnClick.addEventListener('click', (evento) => {
 const focusInput = document.querySelector('.focus');
 focusInput.addEventListener('focus', (evento) => {
     console.log(evento.target.value);
-    // Nota: focus salta al entrar, normalmente el value estará vacío a menos que ya tenga texto
 });
 
 // 1.3 Evento 'input' en el input .value

@@ -1,14 +1,22 @@
 const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
-const foodSchedule = [ /* array del enunciado */ ];
+
+const foodSchedule = [
+  { name: "Heura", isVegan: true },
+  { name: "Salmon", isVegan: false },
+  { name: "Tofu", isVegan: true },
+  { name: "Burger", isVegan: false },
+  { name: "Rice", isVegan: true },
+  { name: "Pasta", isVegan: true },
+];
 
 let fruitIndex = 0;
 
 for (let i = 0; i < foodSchedule.length; i++) {
   if (!foodSchedule[i].isVegan) {
     foodSchedule[i].name = fruits[fruitIndex];
-    foodSchedule[i].isVegan = true; // Ahora es fruta, así que es vegano
+    foodSchedule[i].isVegan = true;
     fruitIndex++;
-    if(fruitIndex >= fruits.length) fruitIndex = 0; // Reiniciar frutas si se acaban
+    if(fruitIndex >= fruits.length) fruitIndex = 0;
   }
 }
 console.log(foodSchedule);

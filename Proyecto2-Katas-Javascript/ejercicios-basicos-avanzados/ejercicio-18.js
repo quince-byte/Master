@@ -7,7 +7,6 @@ const placesToTravel2 = [
   { id: 59, name: "Madagascar" },
 ];
 
-// La forma más segura de eliminar elementos mientras se itera o filtrar:
 const filteredPlaces = [];
 for (let i = 0; i < placesToTravel2.length; i++) {
     if (placesToTravel2[i].id !== 11 && placesToTravel2[i].id !== 40) {

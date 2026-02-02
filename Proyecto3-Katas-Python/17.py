@@ -1,5 +1,5 @@
 from functools import reduce
-# Lista de dígitos a número entero usando reduce().
+# Convierte una lista de dígitos a número entero usando reduce().
 def digitos_a_numero(lista_digitos):
     return reduce(lambda x, y: x * 10 + y, lista_digitos)
 

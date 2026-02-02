@@ -24,19 +24,18 @@ def procesar_texto(texto, opcion, *args):
         return contar_palabras(texto)
     
     elif opcion == "reemplazar":
-        # Esperamos 2 argumentos extra: original y nueva
+        # Se esperan 2 argumentos extra: original y nueva
         if len(args) < 2: return "Error: Faltan argumentos para reemplazar."
         return reemplazar_palabras(texto, args[0], args[1])
     
     elif opcion == "eliminar":
-        # Esperamos 1 argumento extra: palabra a eliminar
+        # Aquí se espera 1 argumento extra: palabra a eliminar
         if len(args) < 1: return "Error: Falta argumento para eliminar."
         return eliminar_palabra(texto, args[0])
     
     else:
         return "Opción no válida."
 
-# CASO DE USO:
 texto_prueba = "Hola Antonio, está genial Python, es facil"
 print(f"Texto original: '{texto_prueba}'")
 print(f"1. Contar: {procesar_texto(texto_prueba, 'contar')}")

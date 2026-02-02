@@ -1,10 +1,11 @@
+
 function findArrayIndex(array, text) {
     for(let i = 0; i < array.length; i++) {
         if(array[i] === text) {
             return i;
         }
     }
-    return -1; // No encontrado
+    return -1;
 }
 
 function removeItem(array, text) {

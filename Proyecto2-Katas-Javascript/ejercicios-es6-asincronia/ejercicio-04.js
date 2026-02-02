@@ -17,18 +17,15 @@ const streamers = [
 const lolStreamers = streamers.filter(streamer => streamer.gameMorePlayed === 'League of Legends');
 console.log(lolStreamers);
 
-// 4.4 Nombre incluye 'u'
+// 4.4 Nombre que incluye 'u'
 const uStreamers = streamers.filter(streamer => streamer.name.includes('u'));
 console.log(uStreamers);
 
 // 4.5 Filter 'Legends' y mutación condicional
-// Nota: filter crea un nuevo array, pero los objetos dentro son referencias.
-// Para cumplir con el enunciado, filtramos y luego mapeamos para editar.
 const legendsStreamers = streamers
     .filter(streamer => streamer.gameMorePlayed.includes('Legends'))
     .map(streamer => {
         if (streamer.age > 35) {
-            // Retornamos una copia con el juego en mayúsculas para no mutar el original
             return { ...streamer, gameMorePlayed: streamer.gameMorePlayed.toUpperCase() };
         }
         return streamer;

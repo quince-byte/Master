@@ -19,5 +19,4 @@ const testMeElements = document.querySelectorAll('[data-function="testMe"]');
 console.log(testMeElements);
 
 // 1.6 Usa querySelector para mostrar por consola el 3 personaje con el atributo data-function="testMe".
-// Como querySelectorAll devuelve un array (NodeList), accedemos por índice (el tercero es índice 2).
 console.log(testMeElements[2]);

@@ -20,8 +20,7 @@ const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']};
 const toyFusion = {...toyOriginal, ...toyUpdate};
 console.log(toyFusion);
 
-// 2.5 Copia eliminando la posición 2 (índice 2: 'amarillo')
+// 2.5 Copia eliminando la posición 2
 const colors = ['rojo', 'azul', 'amarillo', 'verde', 'naranja'];
-// Usamos slice para coger de 0 a 2 (excluido) y de 3 al final
 const colorsNew = [...colors.slice(0, 2), ...colors.slice(3)]; 
 console.log(colorsNew);

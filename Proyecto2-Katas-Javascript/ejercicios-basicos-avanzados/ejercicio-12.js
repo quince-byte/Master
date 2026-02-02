@@ -6,5 +6,4 @@ function removeDuplicates(list) {
     }
   }
   return uniqueList;
-  // Opción avanzada: return [...new Set(list)];
 }
