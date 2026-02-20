@@ -8,13 +8,13 @@ btnClick.addEventListener('click', (evento) => {
     console.log(evento);
 });
 
-// 1.2 Evento 'focus' en el input .focus
+// 1.2 Evento focus
 const focusInput = document.querySelector('.focus');
 focusInput.addEventListener('focus', (evento) => {
     console.log(evento.target.value);
 });
 
-// 1.3 Evento 'input' en el input .value
+// 1.3 Evento input
 const valueInput = document.querySelector('.value');
 valueInput.addEventListener('input', (evento) => {
     console.log(evento.target.value);

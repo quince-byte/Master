@@ -38,21 +38,19 @@ for (const country of countries2) {
     const div = document.createElement('div');
     const h4 = document.createElement('h4');
     const img = document.createElement('img');
-    // Para el 1.6 creamos el botón aquí
     const btnDelete = document.createElement('button');
 
     h4.textContent = country.title;
     img.src = country.imgUrl;
     btnDelete.textContent = 'Eliminar este elemento';
 
-    // 1.6 Funcionalidad del botón individual
     btnDelete.addEventListener('click', () => {
         div.remove();
     });
 
     div.appendChild(h4);
     div.appendChild(img);
-    div.appendChild(btnDelete); // Añadimos el botón al div
+    div.appendChild(btnDelete);
     document.body.appendChild(div);
 }
 
